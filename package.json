@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Nerdines/nerdines.github.io/issues"
   },
-  "homepage": "https://github.com/Nerdines/nerdines.github.io#readme"
+  "homepage": "https://github.com/Nerdines/nerdines.github.io#readme",
+  "dependencies": {
+    "astro": "^1.8.0"
+  }
 }
