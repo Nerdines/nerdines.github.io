@@ -1,4 +1,16 @@
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const title = ReactDOM.createRoot(document.getElementById('title'));
-title.render(<h1>Hello, world!</h1>);
+class Header extends React.Component {
+    render() {
+        return(
+            <div>
+                <h1 style={({textAlign: 'center'}, {fontFamily: 'Quicksand'})}>;
+                    Nerdines
+                </h1>
+            </div>
+        );
+    }
+}
+
+ReactDOM(<Header />, document.getElementById('header'));
