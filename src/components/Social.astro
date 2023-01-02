@@ -1,0 +1,16 @@
+---
+const { data_tip, href, aria_label } = Astro.props;
+const { default: innerHTML } = await import(`../../public/assets/${data_tip}.svg?raw`);
+---
+
+<li class="tooltip tooltip-warning tooltip-bottom" data-tip={data_tip}>
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={aria_label}
+    class="active:bg-base-content/30 active:text-current hover:bg-base-content/20 hover:text-current p-3 rounded-md"
+  >
+    <Fragment set:html={innerHTML} />
+  </a>
+</li>

@@ -1,40 +1,27 @@
 ---
-import NerdLayout from '../layouts/layout.astro';
+import Layout from '../layouts/Layout.astro';
+const pageTitle = 'Nerdines | Game Development Studio';
 ---
 
-<NerdLayout title="Nerdines">
-    <div id="text" style="text-align: center;">
-        <h2 style="color: white;
-        font-size:40px;
-        font-family: quicksand;
-        margin-bottom: 0;">About Us</h2>
-
-        <p style="color: white;
-        font-size:24px;
-        font-family: quicksand">
-            Nerdines is a small independent game studio
-        </p>
-
-        <h2 style="color: white;
-        font-size:40px;
-        font-family: quicksand;
-        margin-bottom: 0;">Our Values</h2>
-
-        <p style="color: white;
-        font-size:24px;
-        font-family: quicksand">
-            don't be a dick
-        </p>
-
-        <h2 style="color: white;
-        font-size:40px;
-        font-family: quicksand;
-        margin-bottom: 0;">Meet the Team</h2>
-
-        <p style="color: white;
-        font-size:24px;
-        font-family: quicksand">
-            we exist
-        </p>
-    </div>
-</NerdLayout>
+<Layout pageTitle={pageTitle}>
+  <div class="text-center text-xl font-semibold"><h2>Website Roadmap</h2></div>
+  <div class="">
+    <ul class="steps steps-vertical lg:steps-horizontal lg:w-full">
+      <li data-content="✓" class="step step-primary font-bold">Make Repo</li>
+      <li data-content="!" class="step step-primary font-bold">Home</li>
+      <li class="step font-semibold">About</li>
+      <li class="step font-semibold">Projects</li>
+      <li class="step font-semibold">Contact</li>
+      <li class="step font-semibold">Complete</li>
+    </ul>
+  </div>
+  <div class="text-center text-xl font-semibold"><h2>Unnamed Game Project</h2></div>
+  <div class="text-center font-semibold"><h4>A bullet hell, horde survival, dungeon crawling game.</h4></div>
+  <div class="">
+    <ul class="steps steps-vertical lg:steps-horizontal lg:w-full">
+      <li data-content="✓" class="step step-primary font-bold">Idea</li>
+      <li data-content="!" class="step step-primary font-bold">Design Document</li>
+      <li class="step font-semibold">Prototyping</li>
+    </ul>
+  </div>
+</Layout>

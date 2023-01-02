@@ -1,22 +1,23 @@
 ---
-import Header from '../pages/header.astro';
-import Footer from '../pages/footer.astro';
-import '@fontsource/quicksand';
+import Head from '../components/Head.astro';
+import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar.astro';
+import '../styles/global.css';
+
+const { pageTitle } = Astro.props;
 ---
 
 <html lang="en">
-        <head>
-            <meta charset="UTF-8">   
-            
-            <style>
-                @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-            </style>
-            <title>Nerdines</title>
-        </head>
-    
-        <body style="background-color:#2d2d2d">
-            <Header />
-            <slot />
-            <Footer />
-        </body>
+  <Head pageTitle={pageTitle} />
+  <body class="flex flex-col items-center min-h-screen antialiased overflow-x-hidden overflow-y-scroll">
+    <div class="flex-grow w-full max-w-3xl">
+      <Navbar />
+      <div class="px-4 pt-4 md:pt-8">
+        <div class="min-w-full prose lg:prose-lg animate-content-fade">
+          <slot />
+        </div>
+      </div>
+    </div>
+    <Footer />
+  </body>
 </html>
